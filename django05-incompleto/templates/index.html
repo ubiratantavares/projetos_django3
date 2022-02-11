@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Título</title>
+    </head>
+    <body>
+        {{ frase }}
+        <br />
+        <br />
+        <a href="/produto/">Acessando a página index.html de produto utilizando caminho absoluto.</a>
+        <br />
+        <br />
+        <a href="produto/">Acessando a página index.html de produto utilizando caminho relativo.</a>
+        <br />
+        <br />
+        <a href="{% url 'produto:index' %}">Acessando a página index.html de produto utilizando o tag url.</a>
+        <br />
+        <br />
+        <hr />
+        <a href="/produto/paginas/pagina1/">Acessando a página pagina1.html de produto utilizando caminho absoluto.</a>
+        <br />
+        <br />
+        <a href="/produto/paginas/pagina2/">Acessando a página pagina2.html de produto utilizando caminho absoluto.</a>
+        <br />
+        <br />
+        <a href="{% url 'produto:pagina1' %}">Acessando a página pagina1.html de produto utilizando o tag url.</a>
+        <br />
+        <br />
+        <a href="{% url 'produto:pagina2' %}">Acessando a página pagina2.html de produto utilizando o tag url.</a>
+        <br />
+        <br />
+    </body>
+</html>
+
+<!--
+    Como acessar a página index.html do projeto:
+    http://127.0.0.1:8000/
+
+    Como acessar a página index.html de produto:
+    http://127.0.0.1:8000/produto/
+-->
